@@ -1,0 +1,6 @@
+<?php
+// Modele : copier ce fichier en app.php et renseigner la vraie valeur.
+// app.php ne doit jamais etre versionne (voir .gitignore).
+
+// Clé API — changez cette valeur avant la mise en production
+define('API_KEY', 'CHANGEZ_CETTE_CLE_API_SECRETE');

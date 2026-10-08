@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <title>e-Config — Mobile — Hybride (preview)</title>
+  <link rel="shortcut icon" href="assets/orange_ico.png">
+  <link href="tokens.css" rel="stylesheet">
+  
+</head>
+<body>
+  <div class="shell">
+    <div class="topbar">
+      <div class="topbar-brand">
+        <img src="assets/orange_2.png" alt="Orange">
+        <span>e-Config</span>
+      </div>
+      <div class="topbar-user">
+        <div class="topbar-avatar">XG</div>
+        <span>XGKR4260</span>
+        <a class="topbar-logout" href="connexion.html" title="Deconnexion">&#9211;</a>
+      </div>
+    </div>
+    <div class="shell-body">
+      <div class="sidebar"><a class="sidebar-item home active" href="accueil.html">&#8962;&nbsp; Accueil</a><div class="sidebar-cat">MOBILE</div><a class="sidebar-item active" href="mobile-hybride.html">Hybride</a><span class="sidebar-item disabled">Postpayee<span class="badge-soon">Bientot</span></span><span class="sidebar-item disabled">Prepayee<span class="badge-soon">Bientot</span></span><div class="sidebar-cat">FTTH</div><span class="sidebar-item disabled">Postpayee<span class="badge-soon">Bientot</span></span><a class="sidebar-item" href="ftth-prepayee.html">Prepayee</a><div class="sidebar-cat">4G</div><span class="sidebar-item disabled">Offres 4G<span class="badge-soon">Bientot</span></span></div>
+      <div class="content">
+        <div class="breadcrumb">Mobile &gt; Hybride</div>
+        
+    <h1 class="page-title">Offres Mobile Hybride</h1>
+    <div class="panel">
+      <h3>Consulter une offre existante</h3>
+      <div class="field-grid cols-3" style="align-items:end; margin-bottom: 24px;">
+        <div><label class="label">TMCODE</label><input class="input" placeholder="Ex : 861"></div>
+        <div><label class="label">SHDES</label><input class="input" placeholder="Ex : MOBC"></div>
+        <div><button class="btn btn-dark" style="width:100%;">&#128269;&nbsp; Rechercher</button></div>
+      </div>
+      <table class="data-table">
+        <thead><tr><th>SPCODE</th><th>Formule</th><th>SHDES</th><th>Prix (centimes)</th><th>Statut</th></tr></thead>
+        <tbody></tbody>
+      </table>
+      <div class="empty-state">
+        <div class="icon">&#128269;</div>
+        <div class="title">Aucune offre affichée</div>
+        <div>Saisissez un TMCODE ou un SHDES pour lancer une recherche.</div>
+      </div>
+    </div>
+
+    <div class="panel">
+      <h3>Créer une offre Hybride</h3>
+      <p class="hint">Les champs marqués * sont obligatoires.</p>
+
+      <div class="banner" style="margin-bottom: 24px;">
+        <div class="banner-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="12" y1="7" x2="12" y2="13"/><circle cx="12" cy="16.5" r="0.5" fill="currentColor"/></svg></div>
+        <div class="banner-body">
+          <p class="banner-title">L'offre n'a pas pu être créée : 2 champs à corriger</p>
+          <p class="banner-text"><a href="#">Description courte (SHDES)</a> : ce code existe déjà<br><a href="#">Formule 1 &gt; SHDES</a> : format attendu D_***</p>
+        </div>
+      </div>
+
+      <div class="step-title"><span class="step-badge">1</span> Informations générales</div>
+      <div class="field-grid cols-3">
+        <div><label class="label">Description longue *</label><input class="input" placeholder="Ex : Mobile Confort"></div>
+        <div><label class="label">Description courte (SHDES) *</label><input class="input has-error" value="MOBC"><p style="color:var(--error); font-size:12px; margin-top:6px;">Ce SHDES est déjà utilisé par une autre offre.</p></div>
+        <div><label class="label">Segment marché</label><select class="input"><option>B2C</option><option>B2B</option><option>TEST</option></select></div>
+      </div>
+    </div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

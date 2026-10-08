@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <title>e-Config — Messages — référence (preview)</title>
+  <link rel="shortcut icon" href="assets/orange_ico.png">
+  <link href="tokens.css" rel="stylesheet">
+  
+</head>
+<body>
+  <div class="shell">
+    <div class="topbar">
+      <div class="topbar-brand">
+        <img src="assets/orange_2.png" alt="Orange">
+        <span>e-Config</span>
+      </div>
+      <div class="topbar-user">
+        <div class="topbar-avatar">XG</div>
+        <span>XGKR4260</span>
+        <a class="topbar-logout" href="connexion.html" title="Deconnexion">&#9211;</a>
+      </div>
+    </div>
+    <div class="shell-body">
+      <div class="sidebar"><a class="sidebar-item home active" href="accueil.html">&#8962;&nbsp; Accueil</a><div class="sidebar-cat">MOBILE</div><a class="sidebar-item" href="mobile-hybride.html">Hybride</a><span class="sidebar-item disabled">Postpayee<span class="badge-soon">Bientot</span></span><span class="sidebar-item disabled">Prepayee<span class="badge-soon">Bientot</span></span><div class="sidebar-cat">FTTH</div><span class="sidebar-item disabled">Postpayee<span class="badge-soon">Bientot</span></span><a class="sidebar-item" href="ftth-prepayee.html">Prepayee</a><div class="sidebar-cat">4G</div><span class="sidebar-item disabled">Offres 4G<span class="badge-soon">Bientot</span></span></div>
+      <div class="content">
+        <div class="breadcrumb">Référence de style</div>
+        
+    <h1 class="page-title">Messages d'erreur et d'information</h1>
+    <p class="page-lead">Couleurs fonctionnelles Orange : erreur, information, succès, avertissement.</p>
+    <div style="display:grid; grid-template-columns: 1fr 1fr; gap: 24px; align-items:start;">
+      <div class="panel">
+        <h3>Bannières</h3>
+        <div class="banner" style="margin-bottom:14px;"><div class="banner-icon">&#9888;</div><div class="banner-body"><p class="banner-title">Erreur</p><p class="banner-text">L'action a échoué. Indiquez la cause et comment corriger.</p></div></div>
+        <div class="banner info" style="margin-bottom:14px;"><div class="banner-icon">i</div><div class="banner-body"><p class="banner-title">Information</p><p class="banner-text">Contexte utile, sans action obligatoire (ex : recherche sans résultat).</p></div></div>
+        <div class="banner success" style="margin-bottom:14px;"><div class="banner-icon">&#10003;</div><div class="banner-body"><p class="banner-title">Succès</p><p class="banner-text">Confirmation d'une création ou d'un enregistrement.</p></div></div>
+        <div class="banner warning"><div class="banner-icon">!</div><div class="banner-body"><p class="banner-title">Avertissement</p><p class="banner-text">Risque à signaler avant de continuer (ex : date d'application passée).</p></div></div>
+      </div>
+      <div>
+        <div class="panel">
+          <h3>Messages de champ</h3>
+          <div class="field-grid">
+            <div><label class="label">Champ en erreur *</label><input class="input has-error" value="M11"><p style="color:var(--error); font-size:12px; margin-top:6px;">Format attendu : D_ + 3 caractères.</p></div>
+            <div><label class="label">Champ avec aide</label><input class="input" placeholder="Ex : 12711.86"><p style="color:var(--text-secondary); font-size:12px; margin-top:6px;">Montant HT, 2 décimales maximum.</p></div>
+          </div>
+        </div>
+        <div class="panel">
+          <h3>Notification (toast)</h3>
+          <p class="hint">En bas à droite, disparaît après 5 s. Pour les confirmations courtes.</p>
+          <div class="toast"><span class="ok">&#10003;</span> Offre enregistrée <a href="#">Voir</a> <button>&times;</button></div>
+          <div class="toast"><span class="err">&#9888;</span> Connexion au service perdue <button class="btn btn-dark" style="padding:4px 10px; font-size:12px;">Réessayer</button> <button>&times;</button></div>
+        </div>
+      </div>
+    </div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

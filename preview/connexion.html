@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <title>e-Config — Connexion (preview)</title>
+  <link rel="shortcut icon" href="assets/orange_ico.png">
+  <link href="tokens.css" rel="stylesheet">
+  <style>
+    html, body { height: 100%; }
+    .split { display: flex; min-height: 100vh; }
+    .pane { width: 50%; }
+
+    .pane-hero {
+      background: var(--black);
+      color: var(--white);
+      padding: 48px;
+      display: flex;
+      flex-direction: column;
+    }
+    .hero-brand { display: flex; align-items: center; gap: 12px; }
+    .hero-brand img { width: 48px; height: 48px; display: block; }
+    .hero-brand span { font-size: 20px; font-weight: 700; }
+
+    .hero-body { margin-top: auto; margin-bottom: auto; max-width: 480px; }
+    .hero-rule { width: 40px; height: 4px; background: var(--orange); margin-bottom: 24px; }
+    .hero-body h1 { font-size: 38px; line-height: 1.15; margin-bottom: 16px; }
+    .hero-body p { font-size: 15px; color: var(--text-on-black-secondary); line-height: 1.5; margin: 0; }
+
+    .hero-legend { display: flex; gap: 24px; }
+    .hero-legend span { display: inline-flex; align-items: center; gap: 8px; font-weight: 700; font-size: 13px; }
+    .hero-legend i { width: 8px; height: 8px; background: var(--orange); display: inline-block; }
+
+    .pane-form {
+      background: var(--white);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 48px;
+    }
+    .form-inner { width: 100%; max-width: 400px; }
+    .form-inner h2 { font-size: 26px; margin-bottom: 6px; }
+    .form-inner > p.lead { color: var(--text-secondary); font-size: 14px; margin: 0 0 24px; }
+
+    .field { margin-bottom: 20px; }
+
+    .footer-note {
+      margin-top: 24px;
+      padding-top: 16px;
+      border-top: 1px solid var(--border);
+      font-size: 12px;
+      color: var(--text-secondary);
+    }
+  </style>
+</head>
+<body>
+  <div class="split">
+    <div class="pane pane-hero">
+      <div class="hero-brand">
+        <img src="assets/orange_2.png" alt="Orange">
+        <span>e-Config</span>
+      </div>
+      <div class="hero-body">
+        <div class="hero-rule"></div>
+        <h1>Configurez vos offres, simplement.</h1>
+        <p>Créez et consultez les offres Mobile, FTTH et 4G depuis un seul espace.</p>
+      </div>
+      <div class="hero-legend">
+        <span><i></i>Mobile</span>
+        <span><i></i>FTTH</span>
+        <span><i></i>4G</span>
+      </div>
+    </div>
+
+    <div class="pane pane-form">
+      <form class="form-inner" method="POST" action="#">
+        <h2>Connexion</h2>
+        <p class="lead">Utilisez votre identifiant Orange (CUID).</p>
+
+        <div class="banner" style="margin-bottom: 24px;">
+          <div class="banner-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="12" y1="7" x2="12" y2="13"/><circle cx="12" cy="16.5" r="0.5" fill="currentColor"/></svg>
+          </div>
+          <div class="banner-body">
+            <p class="banner-title">Connexion impossible</p>
+            <p class="banner-text">Identifiant ou mot de passe incorrect. Après 3 tentatives, votre compte sera temporairement bloqué.</p>
+          </div>
+        </div>
+
+        <div class="field">
+          <label class="label" for="login">Identifiant</label>
+          <input class="input has-error" type="text" id="login" name="login" placeholder="Ex : ABCD1234">
+        </div>
+        <div class="field">
+          <label class="label" for="password">Mot de passe</label>
+          <input class="input" type="password" id="password" name="password" placeholder="Votre mot de passe">
+        </div>
+
+        <button class="btn btn-primary" style="width:100%;" type="submit">Se connecter</button>
+
+        <div class="footer-note">
+          &copy; 2026 Orange &nbsp;·&nbsp; Configuration des offres
+        </div>
+      </form>
+    </div>
+  </div>
+</body>
+</html>

@@ -1,0 +1,292 @@
+/* ==========================================================================
+   e-Config — redesign skin (2026)
+   Loaded last, after Bootstrap 3 / Gentelella / DataTables / iCheck, which
+   stay exactly as-is (same stack, same JS behaviour). This file only
+   restyles their existing classes — see new_design/ for the source mockup
+   and preview/ for the validated static reproduction.
+   ========================================================================== */
+
+:root {
+  --ec-black: #000000;
+  --ec-white: #ffffff;
+  --ec-orange: #ff7900;
+  --ec-orange-hover: #e46a00;
+  --ec-bg: #f4f4f4;
+  --ec-border: #dddddd;
+  --ec-text: #000000;
+  --ec-text-secondary: #595959;
+  --ec-error: #cd3c14;
+  --ec-info: #0066cc;
+  --ec-success: #2e7d32;
+  --ec-warning: #e8b200;
+  --ec-font: -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+}
+
+body {
+  font-family: var(--ec-font);
+  color: var(--ec-text);
+  background: var(--ec-bg);
+}
+h1, h2, h3, h4, h5 { font-family: var(--ec-font); font-weight: 700; color: var(--ec-text); }
+a { color: var(--ec-text); }
+
+/* ==========================================================================
+   Login (login.php)
+   ========================================================================== */
+body.login { background: var(--ec-black); }
+body.login .login_wrapper { display: flex; min-height: 100vh; width: 100%; max-width: none; margin: 0; }
+.login_wrapper .animate.form.login_form {
+  position: static;
+  top: auto;
+  width: 50%;
+  flex: 0 0 50%;
+  background: var(--ec-white);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 48px;
+}
+.login_content { width: 100%; max-width: 380px; text-align: left; text-shadow: none; }
+.login_content h1 {
+  font-size: 26px;
+  margin-bottom: 6px;
+  text-align: left;
+}
+.login_content h1::before,
+.login_content h1::after {
+  content: none;
+}
+.login_content > p.text-muted {
+  margin-bottom: 24px;
+  font-size: 14px;
+}
+.login_content .alert-danger {
+  margin-bottom: 20px !important;
+  text-align: left;
+}
+.login_content label.ec-field-label {
+  display: block;
+  font-weight: 700;
+  font-size: 13px;
+  text-align: left;
+  margin-bottom: 6px;
+}
+.login_content .form-control {
+  margin-bottom: 18px;
+  height: auto;
+  padding: 11px 14px;
+}
+.login_content button.submit {
+  width: 100%;
+  background: var(--ec-orange) !important;
+  color: var(--ec-black) !important;
+  border: none !important;
+  font-weight: 700;
+  padding: 13px 20px !important;
+  border-radius: 0 !important;
+  box-shadow: none !important;
+  text-shadow: none !important;
+}
+.login_content button.submit:hover { background: var(--ec-orange-hover) !important; }
+.login_content .separator { border-top: 1px solid var(--ec-border); margin-top: 24px; padding-top: 16px; }
+.login_content .separator .change_link { color: var(--ec-text-secondary); font-size: 12px; }
+.login_content .separator h1 { display: none; } /* paw icon placeholder, not part of the redesign */
+
+/* Left hero pane — injected as a sibling via layout, see login.php markup */
+.login_hero {
+  width: 50%;
+  flex: 0 0 50%;
+  background: var(--ec-black);
+  color: var(--ec-white);
+  padding: 48px;
+  display: flex;
+  flex-direction: column;
+}
+.login_hero .brand { display: flex; align-items: center; gap: 12px; }
+.login_hero .brand img { width: 40px; height: 40px; display: block; }
+.login_hero .brand span { font-size: 18px; font-weight: 700; color: var(--ec-white); }
+.login_hero .hero-body { margin: auto 0; max-width: 460px; }
+.login_hero .hero-rule { width: 40px; height: 4px; background: var(--ec-orange); margin-bottom: 20px; }
+.login_hero .hero-body h2 { font-size: 34px; line-height: 1.15; margin-bottom: 14px; color: var(--ec-white); }
+.login_hero .hero-body p { font-size: 14px; color: rgba(255,255,255,0.72); margin: 0; }
+.login_hero .hero-legend { display: flex; gap: 20px; }
+.login_hero .hero-legend span { display: inline-flex; align-items: center; gap: 8px; font-weight: 700; font-size: 12px; }
+.login_hero .hero-legend i { width: 8px; height: 8px; background: var(--ec-orange); display: inline-block; }
+
+@media (max-width: 900px) {
+  .login_hero { display: none; }
+  .login_wrapper .animate.form.login_form { width: 100%; }
+}
+
+/* ==========================================================================
+   App shell — topbar + sidebar (layout_header.php / layout_footer.php)
+   ========================================================================== */
+.ec-shell { min-height: 100vh; display: flex; flex-direction: column; }
+
+.ec-topbar {
+  background: var(--ec-black);
+  color: var(--ec-white);
+  height: 64px;
+  min-height: 64px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 24px;
+}
+.ec-topbar-brand { display: flex; align-items: center; gap: 10px; text-decoration: none; color: var(--ec-white); }
+.ec-topbar-brand img { width: 30px; height: 30px; display: block; }
+.ec-topbar-brand span { font-weight: 700; font-size: 16px; }
+.ec-topbar-user { display: flex; align-items: center; gap: 14px; font-size: 13px; color: var(--ec-white); position: relative; }
+.ec-topbar-avatar {
+  width: 28px; height: 28px; border-radius: 50%;
+  background: #333; color: var(--ec-white);
+  display: flex; align-items: center; justify-content: center;
+  font-size: 11px; font-weight: 700;
+}
+.ec-topbar-logout { color: var(--ec-white); opacity: 0.75; text-decoration: none; }
+.ec-topbar-logout:hover { opacity: 1; color: var(--ec-orange); }
+
+.ec-shell-body { display: flex; flex: 1; align-items: stretch; }
+
+.ec-sidebar {
+  width: 240px;
+  min-width: 240px;
+  background: var(--ec-white);
+  border-right: 1px solid var(--ec-border);
+  padding: 18px 0;
+}
+.ec-sidebar-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  padding: 10px 20px;
+  font-size: 14px;
+  color: var(--ec-text);
+  text-decoration: none;
+  border-left: 3px solid transparent;
+}
+.ec-sidebar-item.home { font-weight: 700; }
+.ec-sidebar-item.active { border-left-color: var(--ec-orange); font-weight: 700; background: #fafafa; }
+.ec-sidebar-item.disabled { color: #b3b3b3; cursor: not-allowed; }
+.ec-sidebar-cat {
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  color: #8a8a8a;
+  padding: 16px 20px 6px;
+}
+.ec-badge-soon {
+  font-size: 10px;
+  font-weight: 700;
+  background: #eeeeee;
+  color: #777;
+  padding: 2px 6px;
+}
+
+.ec-content { flex: 1; padding: 32px 40px; }
+.ec-breadcrumb { font-size: 13px; color: var(--ec-text-secondary); margin-bottom: 6px; }
+.ec-page-title { font-size: 26px; margin-bottom: 8px; }
+.ec-page-lead { color: var(--ec-text-secondary); font-size: 14px; margin: 0 0 24px; max-width: 640px; }
+
+.ec-footer { padding: 16px 40px; font-size: 12px; color: var(--ec-text-secondary); }
+
+/* ---- Dashboard cards (index.php) ---- */
+.ec-card-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 20px; }
+.ec-card { background: var(--ec-white); border-top: 3px solid var(--ec-border); padding: 20px; }
+.ec-card.accent { border-top-color: var(--ec-orange); }
+.ec-card-top-row { display: flex; align-items: flex-start; justify-content: space-between; margin-bottom: 14px; }
+.ec-card-chip { font-size: 10px; font-weight: 700; padding: 3px 8px; }
+.ec-card-chip.dark { background: var(--ec-black); color: var(--ec-white); }
+.ec-card-chip.muted { background: #eeeeee; color: #777; }
+.ec-card-eyebrow { font-size: 11px; font-weight: 700; color: var(--ec-text-secondary); margin-bottom: 4px; }
+.ec-card h3 { font-size: 18px; margin-bottom: 8px; }
+.ec-card p { font-size: 13px; color: var(--ec-text-secondary); margin: 0 0 14px; }
+.ec-card-link { font-size: 13px; font-weight: 700; color: var(--ec-black); text-decoration: none; }
+.ec-card-link:hover { color: var(--ec-orange); }
+
+/* ==========================================================================
+   Content panels for the untouched app pages (mobile/hybride.php,
+   ftth/postpaye.php, ftth/prepaye.php) — these keep their original Bootstrap
+   markup (.row/.col-md-*/.form-group/.form-control/.btn/.table/.alert/…),
+   only restyled here.
+   ========================================================================== */
+.ec-content > section {
+  background: var(--ec-white);
+  padding: 24px;
+  margin-bottom: 24px;
+}
+.ec-content > hr { display: none; }
+.ec-content section h3 { font-size: 19px; margin-bottom: 4px; }
+.ec-content section h4 { font-size: 14px; text-transform: none; margin: 20px 0 14px; padding-top: 16px; border-top: 1px solid var(--ec-border); }
+.ec-content section > h3:first-child { margin-top: 0; }
+
+.ec-content .control-label { font-weight: 700; font-size: 13px; }
+.ec-content .form-control {
+  border-radius: 0;
+  border: 1px solid var(--ec-border);
+  box-shadow: none;
+  padding: 10px 12px;
+  height: auto;
+}
+.ec-content .form-control:focus {
+  border-color: var(--ec-black);
+  box-shadow: none;
+}
+
+.ec-content .btn { border-radius: 0; font-weight: 700; box-shadow: none; text-shadow: none; }
+.ec-content .btn-primary {
+  background: var(--ec-black); border-color: var(--ec-black); color: var(--ec-white);
+}
+.ec-content .btn-primary:hover, .ec-content .btn-primary:focus { background: #222; border-color: #222; }
+.ec-content .btn-success {
+  background: var(--ec-orange); border-color: var(--ec-orange); color: var(--ec-black);
+}
+.ec-content .btn-success:hover, .ec-content .btn-success:focus { background: var(--ec-orange-hover); border-color: var(--ec-orange-hover); }
+.ec-content .btn-default { background: var(--ec-white); border-color: var(--ec-border); }
+
+/* Banner treatment — shared by the app shell (.ec-content) and the
+   standalone login page (.login_content), since both render plain
+   Bootstrap .alert-* markup (PHP-rendered or JS-injected). */
+.alert {
+  border-radius: 0;
+  border: 1px solid var(--ec-border);
+  border-left: 4px solid var(--ec-border);
+  background: var(--ec-white);
+  box-shadow: none;
+  color: var(--ec-text);
+}
+.alert-danger { border-color: var(--ec-error); border-left-color: var(--ec-error); }
+.alert-success { border-color: var(--ec-border); border-left-color: var(--ec-success); }
+.alert-warning { border-color: var(--ec-border); border-left-color: var(--ec-warning); }
+.alert-info { border-color: var(--ec-border); border-left-color: var(--ec-info); }
+
+.ec-content .table { background: var(--ec-white); }
+.ec-content .table > thead > tr > th {
+  border-bottom: 2px solid var(--ec-black);
+  font-size: 12px;
+  font-weight: 700;
+  background: var(--ec-bg);
+}
+.ec-content .table > tbody > tr > td { font-size: 13px; vertical-align: middle; }
+
+.ec-content .checkbox label { font-size: 14px; }
+
+/* DataTables light touch-up */
+.ec-content .dataTables_wrapper .form-control { display: inline-block; width: auto; }
+.ec-content .dataTables_wrapper .dataTables_paginate .paginate_button {
+  border-radius: 0 !important;
+}
+.ec-content .dataTables_wrapper .dataTables_paginate .paginate_button.current {
+  background: var(--ec-black) !important;
+  border-color: var(--ec-black) !important;
+  color: var(--ec-white) !important;
+}
+
+/* Empty DataTables state: style the plugin's own "no data" row like the
+   redesign's empty-state card instead of reproducing it in markup. */
+.ec-content table.dataTable tbody .dataTables_empty {
+  padding: 40px 20px;
+  color: var(--ec-text-secondary);
+  font-size: 14px;
+}

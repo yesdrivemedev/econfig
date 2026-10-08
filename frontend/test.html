@@ -1,0 +1,305 @@
+
+
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <!-- Meta, title, CSS, favicons, etc. -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>e-Config </title>
+        <!-- Bootstrap -->
+   <link rel="shortcut icon" href="http://192.168.4.146:8000/sceingconfigurationdesoffres/app/configuration/frontend/addons/images/orange_ico.png" />
+    <link href="http://192.168.4.146:8000/sceingconfigurationdesoffres/app/configuration/frontend/vendors/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link href="http://192.168.4.146:8000/sceingconfigurationdesoffres/app/configuration/frontend/vendors/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+    <!-- NProgress -->
+    <link href="http://192.168.4.146:8000/sceingconfigurationdesoffres/app/configuration/frontend/vendors/nprogress/nprogress.css" rel="stylesheet">
+    <!-- iCheck -->
+    <link href="http://192.168.4.146:8000/sceingconfigurationdesoffres/app/configuration/frontend/vendors/iCheck/skins/flat/green.css" rel="stylesheet">
+	
+    <!-- bootstrap-progressbar -->
+    <link href="http://192.168.4.146:8000/sceingconfigurationdesoffres/app/configuration/frontend/vendors/bootstrap-progressbar/css/bootstrap-progressbar-3.3.4.min.css " rel="stylesheet">
+    <!-- JQVMap -->
+    <link href="http://192.168.4.146:8000/sceingconfigurationdesoffres/app/configuration/frontend/vendors/jqvmap/dist/jqvmap.min.css" rel="stylesheet"/>
+    <!-- bootstrap-daterangepicker -->
+    <link href="http://192.168.4.146:8000/sceingconfigurationdesoffres/app/configuration/frontend/vendors/bootstrap-daterangepicker/daterangepicker.css" rel="stylesheet">
+
+    <!-- Custom Theme Style -->
+    <link href="http://192.168.4.146:8000/sceingconfigurationdesoffres/app/configuration/frontend/build/css/custom.min.css" rel="stylesheet">
+	 
+        	
+  </head>
+
+  <body class="nav-md">
+    <div class="container body">
+      <div class="main_container">
+        <div class="col-md-3 left_col">
+          <div class="left_col scroll-view">
+            <div class="navbar nav_title" style="border: 0;">
+              <a href="" class="site_title"><img class="" src="http://192.168.4.146:8000/sceingconfigurationdesoffres/app/configuration/frontend/addons/images/orange_2.png"> <span>e-Config</span></a>
+            </div>
+
+            <div class="clearfix"></div>
+
+            <!-- menu profile quick info -->
+            <div class="profile clearfix">
+              <div class="profile_pic">
+                <img src="http://192.168.4.146:8000/sceingconfigurationdesoffres/app/configuration/frontend/addons/images/user1.jpg" alt="..." class="img-circle profile_img">
+              </div>
+              <div class="profile_info">
+                <span>Bienvenue</span>
+                <h2></h2>
+              </div>
+            </div>
+            <!-- /menu profile quick info -->
+
+            <br />
+
+            <!-- sidebar menu -->
+            <div id="sidebar-menu" class="main_menu_side hidden-print main_menu">
+              <div class="menu_section">
+			  
+                <ul class="nav side-menu">
+                  <li><a><i class="fa fa-mobile" aria-hidden="true"></i> Mobile <span class="fa fa-chevron-down"></span></a>
+                    <ul class="nav child_menu">
+					   <li><a href="mobile/hybride.php">Hybride</a></li>
+					   <li><a href="creation-compte">Postpayé</a></li>
+					   <li><a href="notification">Prépayée</a></li>
+                    </ul>
+                  </li>
+                </ul>
+				
+				
+				  <ul class="nav side-menu">
+                  <li><a><i class="fa fa-internet-explorer" aria-hidden="true"></i> Ftth <span class="fa fa-chevron-down"></span></a>
+                    <ul class="nav child_menu">
+					   <li><a href="creation-compte">Postpayé</a></li>
+					   <li><a href="notification">Prépayée</a></li>
+                    </ul>
+                  </li>
+                </ul>
+				
+				 <ul class="nav side-menu">
+                  <li><a><i class="fa fa-wifi" aria-hidden="true"></i> 4G <span class="fa fa-chevron-down"></span></a>
+                    <ul class="nav child_menu">
+					   <li><a href="creation-compte">Hybride</a></li>
+					   <li><a href="notification">Prépayée</a></li>
+                    </ul>
+                  </li>
+                </ul>
+				
+				
+				
+              </div>
+			  
+			  
+			  
+			  
+			  
+			  
+			 
+			  
+            </div>
+            <!-- /sidebar menu -->
+			
+			
+			
+			
+
+            <!-- /menu footer buttons -->
+            <div class="sidebar-footer hidden-small">
+              <a data-toggle="tooltip" data-placement="top" title="Settings">
+                <span class="glyphicon glyphicon-cog" aria-hidden="true"></span>
+              </a>
+			  <a data-toggle="tooltip" data-placement="top" title="">
+                <span class="glyphicon glyphicon-fullscreen" aria-hidden="true"></span>
+              </a>
+              <a data-toggle="tooltip" data-placement="top" title="">
+                <span class="glyphicon glyphicon-eye-close" aria-hidden="true"></span>
+              </a>
+
+              <a data-toggle="tooltip" data-placement="top" title="Logout" href="">
+                <span class="glyphicon glyphicon-off" aria-hidden="true"></span>
+              </a>
+            </div>
+            <!-- /menu footer buttons -->
+          </div>
+        </div>
+
+        <!-- top navigation -->
+        <div class="top_nav">
+          <div class="nav_menu">
+            <nav>
+              <div class="nav toggle">
+                <a id="menu_toggle"><i class="fa fa-bars"></i></a>
+              </div>
+
+              <ul class="nav navbar-nav navbar-right">
+                <li class="">
+                  <a href="javascript:;" class="user-profile dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
+                    <img src="http://192.168.4.146:8000/sceingconfigurationdesoffres/app/configuration/frontend/addons/images/user1.jpg" alt="">Bienvenue
+                    <span class=" fa fa-angle-down"></span>
+                  </a>
+                  <ul class="dropdown-menu dropdown-usermenu pull-right">
+                   
+                    <li><a href=""><i class="fa fa-sign-out pull-right"></i> Log Out</a></li>
+                  </ul>
+                </li>
+
+                
+              </ul>
+            </nav>
+          </div>
+        </div>
+        <!-- /top navigation -->
+
+        <!-- page content -->
+        <div class="right_col" role="main">
+          
+        
+ <div class="col-md-12 col-sm-12 col-xs-12">
+              <div class="x_panel">
+                <div class="x_title">
+                  <h2>e-Config <small>Configuration des offres</small></h2>
+                  <ul class="nav navbar-right panel_toolbox">
+                    <li><a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
+                    </li>
+                   
+                   
+                    </li>
+                  </ul>
+                  <div class="clearfix"></div>
+                </div>
+                <div class="x_content"><div class="p-2">
+    <h2>Bienvenue</h2>
+    <p>Choisissez une technologie et un type d'offre dans le menu a gauche pour commencer.</p>
+    <p>Seule l'offre <strong>Mobile &raquo; Hybride</strong> est fonctionnelle pour l'instant. Les autres
+       combinaisons (grisees dans le menu) seront activees au fur et a mesure que leurs API seront pretes.</p>
+</div>
+
+
+                 
+
+                </div>
+              </div>
+            </div>
+
+           
+        </div>
+        <!-- /page content -->
+ 
+                <!-- footer content -->
+        <footer>
+          <div class="pull-right">
+            e-Config | Configuration des offres
+          </div>
+          <div class="clearfix"></div>
+        </footer>
+        <!-- /footer content -->
+      </div>
+    </div>
+	    
+	
+	    <!-- jQuery -->
+    <script src="http://192.168.4.146:8000/sceingconfigurationdesoffres/app/configuration/frontend/vendors/jquery/dist/jquery.min.js"></script>
+    <!-- Bootstrap -->
+    <script src="http://192.168.4.146:8000/sceingconfigurationdesoffres/app/configuration/frontend/vendors/bootstrap/dist/js/bootstrap.min.js"></script>
+    <!-- FastClick -->
+    <script src="http://192.168.4.146:8000/sceingconfigurationdesoffres/app/configuration/frontend/vendors/fastclick/lib/fastclick.js"></script>
+    <!-- NProgress -->
+    <script src="http://192.168.4.146:8000/sceingconfigurationdesoffres/app/configuration/frontend/vendors/nprogress/nprogress.js"></script>
+    <!-- Chart.js -->
+    <script src="http://192.168.4.146:8000/sceingconfigurationdesoffres/app/configuration/frontend/vendors/Chart.js/dist/Chart.min.js"></script>
+    <!-- gauge.js -->
+    <script src="http://192.168.4.146:8000/sceingconfigurationdesoffres/app/configuration/frontend/vendors/gauge.js/dist/gauge.min.js"></script>
+    <!-- bootstrap-progressbar -->
+    <script src="http://192.168.4.146:8000/sceingconfigurationdesoffres/app/configuration/frontend/vendors/bootstrap-progressbar/bootstrap-progressbar.min.js"></script>
+    <!-- iCheck -->
+    <script src="http://192.168.4.146:8000/sceingconfigurationdesoffres/app/configuration/frontend/vendors/iCheck/icheck.min.js"></script>
+    <!-- Skycons -->
+    <script src="http://192.168.4.146:8000/sceingconfigurationdesoffres/app/configuration/frontend/vendors/skycons/skycons.js"></script>
+    <!-- Flot -->
+    <script src="http://192.168.4.146:8000/sceingconfigurationdesoffres/app/configuration/frontend/vendors/Flot/jquery.flot.js"></script>
+    <script src="http://192.168.4.146:8000/sceingconfigurationdesoffres/app/configuration/frontend/vendors/Flot/jquery.flot.pie.js"></script>
+    <script src="http://192.168.4.146:8000/sceingconfigurationdesoffres/app/configuration/frontend/vendors/Flot/jquery.flot.time.js"></script>
+    <script src="http://192.168.4.146:8000/sceingconfigurationdesoffres/app/configuration/frontend/vendors/Flot/jquery.flot.stack.js"></script>
+    <script src="http://192.168.4.146:8000/sceingconfigurationdesoffres/app/configuration/frontend/vendors/Flot/jquery.flot.resize.js"></script>
+    <!-- Flot plugins -->
+    <script src="http://192.168.4.146:8000/sceingconfigurationdesoffres/app/configuration/frontend/vendors/flot.orderbars/js/jquery.flot.orderBars.js"></script>
+    <script src="http://192.168.4.146:8000/sceingconfigurationdesoffres/app/configuration/frontend/vendors/flot-spline/js/jquery.flot.spline.min.js"></script>
+    <script src="http://192.168.4.146:8000/sceingconfigurationdesoffres/app/configuration/frontend/vendors/flot.curvedlines/curvedLines.js"></script>
+    <!-- DateJS -->
+    <script src="http://192.168.4.146:8000/sceingconfigurationdesoffres/app/configuration/frontend/vendors/DateJS/build/date.js"></script>
+    <!-- JQVMap -->
+    <script src="http://192.168.4.146:8000/sceingconfigurationdesoffres/app/configuration/frontend/vendors/jqvmap/dist/jquery.vmap.js"></script>
+    <script src="http://192.168.4.146:8000/sceingconfigurationdesoffres/app/configuration/frontend/vendors/jqvmap/dist/maps/jquery.vmap.world.js "></script>
+    <script src="http://192.168.4.146:8000/sceingconfigurationdesoffres/app/configuration/frontend/vendors/jqvmap/examples/js/jquery.vmap.sampledata.js "></script>
+    <!-- bootstrap-daterangepicker -->
+    <script src="http://192.168.4.146:8000/sceingconfigurationdesoffres/app/configuration/frontend/vendors/moment/min/moment.min.js"></script>
+    <script src="http://192.168.4.146:8000/sceingconfigurationdesoffres/app/configuration/frontend/vendors/bootstrap-daterangepicker/daterangepicker.js"></script>
+   <script src="http://192.168.4.146:8000/sceingconfigurationdesoffres/app/configuration/frontend/vendors/dropzone/dist/min/dropzone.min.js"></script>
+    <!-- Datatables -->
+	<script src="http://192.168.4.146:8000/sceingconfigurationdesoffres/app/configuration/frontend/vendors/datatables.net/js/jquery.dataTables.min.js"></script>
+	<script src="http://192.168.4.146:8000/sceingconfigurationdesoffres/app/configuration/frontend/vendors/datatables.net-bs/js/dataTables.bootstrap.min.js"></script>
+	<script src="http://192.168.4.146:8000/sceingconfigurationdesoffres/app/configuration/frontend/vendors/datatables.net-buttons/js/dataTables.buttons.min.js"></script>
+	<script src="http://192.168.4.146:8000/sceingconfigurationdesoffres/app/configuration/frontend/vendors/datatables.net-buttons-bs/js/buttons.bootstrap.min.js"></script>
+	<script src="http://192.168.4.146:8000/sceingconfigurationdesoffres/app/configuration/frontend/vendors/datatables.net-buttons/js/buttons.flash.min.js"></script>
+	<script src="http://192.168.4.146:8000/sceingconfigurationdesoffres/app/configuration/frontend/vendors/datatables.net-buttons/js/buttons.html5.min.js"></script>
+	<script src="http://192.168.4.146:8000/sceingconfigurationdesoffres/app/configuration/frontend/vendors/datatables.net-buttons/js/buttons.print.min.js"></script>
+	<script src="http://192.168.4.146:8000/sceingconfigurationdesoffres/app/configuration/frontend/vendors/datatables.net-fixedheader/js/dataTables.fixedHeader.min.js"></script>
+	<script src="http://192.168.4.146:8000/sceingconfigurationdesoffres/app/configuration/frontend/vendors/datatables.net-keytable/js/dataTables.keyTable.min.js"></script>
+	<script src="http://192.168.4.146:8000/sceingconfigurationdesoffres/app/configuration/frontend/vendors/datatables.net-responsive/js/dataTables.responsive.min.js"></script>
+	<script src="http://192.168.4.146:8000/sceingconfigurationdesoffres/app/configuration/frontend/vendors/datatables.net-responsive-bs/js/responsive.bootstrap.js"></script>
+	<script src="http://192.168.4.146:8000/sceingconfigurationdesoffres/app/configuration/frontend/vendors/datatables.net-scroller/js/dataTables.scroller.min.js"></script>
+	<script src="http://192.168.4.146:8000/sceingconfigurationdesoffres/app/configuration/frontend/vendors/jszip/dist/jszip.min.js"></script>
+	<script src="http://192.168.4.146:8000/sceingconfigurationdesoffres/app/configuration/frontend/vendors/pdfmake/build/pdfmake.min.js"></script>
+	<script src="http://192.168.4.146:8000/sceingconfigurationdesoffres/app/configuration/frontend/vendors/pdfmake/build/vfs_fonts.js"></script>
+	
+	<script src="js/myfacture.js"></script>
+	<script src="js/highcharts.js"></script>
+	<script src="js/highcharts-more.js"></script>
+	<script src="js/data.js"></script>
+	<script src="js/exporting.js"></script>
+	<script src="js/loader.js"></script>
+	
+	 <script type="text/javascript">
+		 
+		  $('#datatable').DataTable( {
+  ordering:  false,
+  "pageLength": 50,
+  "searching": true,
+    "language": {
+    "sProcessing":     "Traitement en cours...",
+    "sSearch":         "Rechercher&nbsp;:",
+    "sLengthMenu":     "Afficher _MENU_ &eacute;l&eacute;ments",
+    "sInfo":           "Affichage de l'&eacute;l&eacute;ment _START_ &agrave; _END_ sur _TOTAL_ &eacute;l&eacute;ments",
+    "sInfoEmpty":      "Affichage de l'&eacute;l&eacute;ment 0 &agrave; 0 sur 0 &eacute;l&eacute;ment",
+    "sInfoFiltered":   "(filtr&eacute; de _MAX_ &eacute;l&eacute;ments au total)",
+    "sInfoPostFix":    "",
+    "sLoadingRecords": "Chargement en cours...",
+    "sZeroRecords":    "Aucun &eacute;l&eacute;ment &agrave; afficher",
+    "sEmptyTable":     "Aucune donn&eacute;e disponible dans le tableau",
+    "oPaginate": {
+        "sFirst":      "Premier",
+        "sPrevious":   "Pr&eacute;c&eacute;dent",
+        "sNext":       "Suivant",
+        "sLast":       "Dernier"
+    },
+    "oAria": {
+        "sSortAscending":  ": activer pour trier la colonne par ordre croissant",
+        "sSortDescending": ": activer pour trier la colonne par ordre d&eacute;croissant"
+    }
+}
+});
+	
+	</script>
+   
+   
+   
+    <!-- Custom Theme Scripts -->
+    <script src="build/js/custom.min.js"></script>
+	  </body>
+</html>
