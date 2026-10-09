@@ -57,7 +57,7 @@ body.login .login_wrapper { display: flex; min-height: 100vh; width: 100%; max-w
 .login_content h1::after {
   content: none;
 }
-.login_content > p.text-muted {
+.login_content p.text-muted {
   margin-bottom: 24px;
   font-size: 14px;
 }
@@ -212,15 +212,14 @@ body.login .login_wrapper { display: flex; min-height: 100vh; width: 100%; max-w
    markup (.row/.col-md-*/.form-group/.form-control/.btn/.table/.alert/…),
    only restyled here.
    ========================================================================== */
-.ec-content > section {
+.ec-content section {
   background: var(--ec-white);
   padding: 24px;
   margin-bottom: 24px;
 }
-.ec-content > hr { display: none; }
 .ec-content section h3 { font-size: 19px; margin-bottom: 4px; }
 .ec-content section h4 { font-size: 14px; text-transform: none; margin: 20px 0 14px; padding-top: 16px; border-top: 1px solid var(--ec-border); }
-.ec-content section > h3:first-child { margin-top: 0; }
+.ec-content section h3:first-child { margin-top: 0; }
 
 .ec-content .control-label { font-weight: 700; font-size: 13px; }
 .ec-content .form-control {
@@ -263,13 +262,13 @@ body.login .login_wrapper { display: flex; min-height: 100vh; width: 100%; max-w
 .alert-info { border-color: var(--ec-border); border-left-color: var(--ec-info); }
 
 .ec-content .table { background: var(--ec-white); }
-.ec-content .table > thead > tr > th {
+.ec-content .table thead tr th {
   border-bottom: 2px solid var(--ec-black);
   font-size: 12px;
   font-weight: 700;
   background: var(--ec-bg);
 }
-.ec-content .table > tbody > tr > td { font-size: 13px; vertical-align: middle; }
+.ec-content .table tbody tr td { font-size: 13px; vertical-align: middle; }
 
 .ec-content .checkbox label { font-size: 14px; }
 

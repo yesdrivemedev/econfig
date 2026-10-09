@@ -42,8 +42,6 @@ $durees = getFtthPrepayeeDurees();
     </table>
 </section>
 
-<hr>
-
 <!-- Creation d'une offre FTTH Prepayee -->
 <section>
     <h3>Creer une offre FTTH Prepayee</h3>

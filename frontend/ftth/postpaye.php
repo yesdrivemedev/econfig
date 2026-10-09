@@ -40,8 +40,6 @@ require_once __DIR__ . '/../includes/layout_header.php';
     </table>
 </section>
 
-<hr>
-
 <!-- Creation d'une offre FTTH Postpayee -->
 <section>
     <h3>Creer une offre FTTH Postpayee</h3>
