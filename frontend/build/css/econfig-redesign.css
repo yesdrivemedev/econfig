@@ -28,6 +28,7 @@ body {
   background: var(--ec-bg);
 }
 h1, h2, h3, h4, h5 { font-family: var(--ec-font); font-weight: 700; color: var(--ec-text); }
+h3 { color: var(--ec-error); }
 a { color: var(--ec-text); }
 
 /* ==========================================================================
