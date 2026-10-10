@@ -9,7 +9,7 @@ require_once __DIR__ . '/../includes/layout_header.php';
 <h1 class="ec-page-title">Offres FTTH Postpayée</h1>
 
 <!-- Consultation d'une offre existante -->
-<section class="mb-5">
+<section class="ec-panel mb-5">
     <h3>Consulter une offre existante</h3>
     <div class="row">
         <div class="col-md-3 form-group">
@@ -41,7 +41,7 @@ require_once __DIR__ . '/../includes/layout_header.php';
 </section>
 
 <!-- Creation d'une offre FTTH Postpayee -->
-<section>
+<section class="ec-panel">
     <h3>Creer une offre FTTH Postpayee</h3>
     <p class="text-muted">La duree est fixee a <strong>Illimite</strong> pour les offres postpayees.</p>
     <form id="form-offre-ftth">

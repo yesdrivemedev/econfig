@@ -210,16 +210,17 @@ body.login .login_wrapper { display: flex; min-height: 100vh; width: 100%; max-w
    Content panels for the untouched app pages (mobile/hybride.php,
    ftth/postpaye.php, ftth/prepaye.php) — these keep their original Bootstrap
    markup (.row/.col-md-*/.form-group/.form-control/.btn/.table/.alert/…),
-   only restyled here.
+   only restyled here. Targeted by the .ec-panel class (not the bare
+   "section" tag, which some environments strip/alter when serving CSS).
    ========================================================================== */
-.ec-content section {
+.ec-panel {
   background: var(--ec-white);
   padding: 24px;
   margin-bottom: 24px;
 }
-.ec-content section h3 { font-size: 19px; margin-bottom: 4px; }
-.ec-content section h4 { font-size: 14px; text-transform: none; margin: 20px 0 14px; padding-top: 16px; border-top: 1px solid var(--ec-border); }
-.ec-content section h3:first-child { margin-top: 0; }
+.ec-panel h3 { font-size: 19px; margin-bottom: 4px; }
+.ec-panel h4 { font-size: 14px; text-transform: none; margin: 20px 0 14px; padding-top: 16px; border-top: 1px solid var(--ec-border); }
+.ec-panel h3:first-child { margin-top: 0; }
 
 .ec-content .control-label { font-weight: 700; font-size: 13px; }
 .ec-content .form-control {
