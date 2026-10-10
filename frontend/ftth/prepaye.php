@@ -11,7 +11,7 @@ $durees = getFtthPrepayeeDurees();
 <h1 class="ec-page-title">Offres FTTH Prépayée</h1>
 
 <!-- Consultation d'une offre existante -->
-<section class="ec-panel mb-5">
+<section class="ec-panel mb-5" style="background: #ffffff; padding: 24px; margin-bottom: 24px;">
     <h3>Consulter une offre existante</h3>
     <div class="row">
         <div class="col-md-3 form-group">
@@ -43,7 +43,7 @@ $durees = getFtthPrepayeeDurees();
 </section>
 
 <!-- Creation d'une offre FTTH Prepayee -->
-<section class="ec-panel">
+<section class="ec-panel" style="background: #ffffff; padding: 24px; margin-bottom: 24px;">
     <h3>Creer une offre FTTH Prepayee</h3>
     <form id="form-offre-ftth">
         <div class="row">
